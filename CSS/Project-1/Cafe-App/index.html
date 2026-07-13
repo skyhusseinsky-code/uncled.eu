@@ -67,11 +67,15 @@
   </main>
 
   <script>
-  fetch("preview.html")
-    .then(response => response.text())
-    .then(code => {
-      document.getElementById("code-output").textContent = code;
-    });
-</script>
+    Promise.all([
+      fetch("preview.html").then(response => response.text()),
+      fetch("styles.css").then(response => response.text())
+    ])
+      .then(([htmlCode, cssCode]) => {
+        document.getElementById("code-output").textContent =
+          "HTML\n\n" + htmlCode +
+          "\n\n\nCSS\n\n" + cssCode;
+      });
+  </script>
 </body>
 </html>
