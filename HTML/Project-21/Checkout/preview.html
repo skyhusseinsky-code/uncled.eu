@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+</head>
+
+<body>
+  <h1>Checkout</h1>
+  <section>
+    <h2>Your Cart</h2>
+    <img src="https://cdn.freecodecamp.org/curriculum/labs/spoon.jpg" alt="Left-handed spoon">
+    <p>Left-handed spoon</p>
+    <p>$29.99</p>
+  </section>
+
+  <section>
+    <h2>Payment Information</h2>
+    <form>
+      <div>
+        <label for="card-name">Cardholder Name <span aria-hidden="true">*</span> </label>
+        <input required id="card-name" name="card-name" type="text">
+      </div>
+
+      <div>
+        <label for="card-number">Card Number <span aria-hidden="true">*</span> </label>
+        <input required id="card-number" name="card-number" type="text" aria-describedby="card-number-help">
+        <p id="card-number-help"> <i>Please enter your 16-digit card number without spaces or dashes.</i> </p>
+      </div>
+
+      <div>
+        <label for="expiry-date">Expiry Date <span aria-hidden="true">*</span> </label>
+        <input required id="expiry-date" name="expiry-date" type="text">
+      </div>
+
+      <div>
+        <label for="CVV">CVV <span aria-hidden="true">*</span> </label>
+        <input required id="CVV" name="CVV" type="text" aria-label="Card Verification Value">  
+      </div>
+      <input type="submit" value="Place Order">
+    </form>
+  </section>
+</body>
+
+</html>
